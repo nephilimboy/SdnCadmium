@@ -21,7 +21,7 @@ type of flow with a new destination.
 - Cadmium 
 http://www.sce.carleton.ca/courses/sysc-5104/lib/exe/fetch.php?media=cadmium.pdf
 
-## To *Run the Project* : 
+## To Run the Project : 
 - make clean
 - make all
 
@@ -41,4 +41,4 @@ http://www.sce.carleton.ca/courses/sysc-5104/lib/exe/fetch.php?media=cadmium.pdf
 viewer
 2. Click on the “Load simulation” on web viewer page
 
-![Farmers Market Finder Demo](SDN_WebViewer/SDN_output_messages.gif)
+![Web Viewer](SDN_WebViewer/SDN_output_messages.gif)
