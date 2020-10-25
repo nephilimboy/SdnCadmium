@@ -40,3 +40,5 @@ http://www.sce.carleton.ca/courses/sysc-5104/lib/exe/fetch.php?media=cadmium.pdf
 1. Load “Diagram.svg”, “Messages.log”, “Options.json”, “Structure.json” from **SDN_WebViewer** folder to the web
 viewer
 2. Click on the “Load simulation” on web viewer page
+
+![Farmers Market Finder Demo](SDN_WebViewer/SDN_output_messages.gif)
