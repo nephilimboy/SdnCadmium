@@ -36,8 +36,7 @@ http://www.sce.carleton.ca/courses/sysc-5104/lib/exe/fetch.php?media=cadmium.pdf
 ```
 
 
-## To visualize the result on Web Viewer
-1. http://ec2-3-235-245-192.compute-1.amazonaws.com:8080/devs-viewer/app-simple/
+## To visualize the result on ARSLabDEVS Web Viewer
 2. Load “Diagram.svg”, “Messages.log”, “Options.json”, “Structure.json” from **SDN_WebViewer** folder to the web
 viewer
 3. Click on the “Load simulation” on web viewer page
