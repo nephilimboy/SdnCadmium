@@ -37,6 +37,6 @@ http://www.sce.carleton.ca/courses/sysc-5104/lib/exe/fetch.php?media=cadmium.pdf
 
 
 ## To visualize the result on ARSLabDEVS Web Viewer
-2. Load “Diagram.svg”, “Messages.log”, “Options.json”, “Structure.json” from **SDN_WebViewer** folder to the web
+1. Load “Diagram.svg”, “Messages.log”, “Options.json”, “Structure.json” from **SDN_WebViewer** folder to the web
 viewer
-3. Click on the “Load simulation” on web viewer page
+2. Click on the “Load simulation” on web viewer page
