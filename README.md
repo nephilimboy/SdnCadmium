@@ -21,7 +21,7 @@ type of flow with a new destination.
 - Cadmium 
 http://www.sce.carleton.ca/courses/sysc-5104/lib/exe/fetch.php?media=cadmium.pdf
 
-## To Run the Project : 
+## To make the project : 
 - make clean
 - make all
 
