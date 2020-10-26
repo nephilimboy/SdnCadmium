@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Models>
+	<Model name="Client" type="atomic" description="Client for sending the trafic to server through switch">
+		<Inputs>
+			<Port name="inFromSwitch" type="Message_t" description="an input port from switch"/>		
+			<Port name="inFromReader" type="Message_t" description="a new assignment has been submitted"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="outToSwitch" type="Message_t" description="the output showing if the submission was successful or not"/>
+		</Outputs>
+		<Files>	
+			<File name="client.hpp" type="hpp" location="/atomic"/>
+			<File name="main_client_test.cpp" type="cpp" location="/test"/>
+			<File name="client_input.txt" type="TXT" location="/input"/>
+			<File name="client_output_state.txt" type="TXT" location="/results"/>
+			<File name="client_output_messages.txt" type="TXT" location="/results"/>
+		</Files>
+	</Model>
+
+	<Model name="Server" type="atomic" description="Server for receiving the traffic and send ACK back to the client">
+		<Inputs>
+			<Port name="inFromSwitch" type="Message_t" description="an input port from switch"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="outToSwitch" type="Message_t" description="the output showing if the submission was successful or not"/>
+		</Outputs>
+		<Files>	
+			<File name="server.hpp" type="hpp" location="/atomic"/>
+			<File name="main_server_test.cpp" type="cpp" location="/test"/>
+			<File name="server_input.txt" type="TXT" location="/input"/>
+			<File name="server_output_state.txt" type="TXT" location="/results"/>
+			<File name="server_output_messages.txt" type="TXT" location="/results"/>
+		</Files>
+	</Model>
+
+	<Model name="SdnController" type="coupled" description="SDN Controller for setting flow rule">
+		<Inputs>
+			<Port name="inFromSwitch" type="Message_t" description="an import port which contains the packet in order to decide what to do with the flow"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="outToSwitch" type="Message_t" description="an output to a new flow rule which will be added to switch's flow table"/>
+		</Outputs>
+		<Files>	
+			<File name="sdnController.hpp" type="hpp" location="/atomic"/>
+			<File name="main_sdnController_test.cpp" type="cpp" location="/test"/>
+			<File name="sdnController_test.txt" type="TXT" location="/input"/>
+			<File name="sdnController_output_state.txt" type="TXT" location="/results"/>
+			<File name="sdnController_output_messages.txt" type="TXT" location="/results"/>
+		</Files>
+	</Model>
+
+	<Model name="Switch" type="coupled" description="Server for receiving the traffic and send ACK back to the client">
+		<Inputs>
+			<Port name="inFromController" type="Message_t" description="an input from controller which contains new flow rules"/>		
+			<Port name="inFromServer" type="Message_t" description="an input from server for sending back the ACK"/>		
+			<Port name="inFromClient" type="Message_t" description="an input from client which contains client's data"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="outToController" type="Message_t" description="the output to controller for sending packet to controller for decision making"/>
+			<Port name="outToServer" type="Message_t" description="an output to thse server to send the pakcet"/>
+			<Port name="outToClient" type="Message_t" description="and output to the client to send the reply ACK"/>
+		</Outputs>
+		<Files>	
+			<File name="switch.hpp" type="hpp" location="/atomic"/>
+			<File name="main_switch_client_input_test.cpp" type="cpp" location="/test"/>
+			<File name="switch_client_input_test.txt" type="TXT" location="/input"/>
+			<File name="switch_client_input_output_state.txt" type="TXT" location="/results"/>
+			<File name="switch_client_input_output_messages.txt" type="TXT" location="/results"/>
+		</Files>
+	</Model>
+</Models>
